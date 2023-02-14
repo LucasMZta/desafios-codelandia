@@ -1,0 +1,103 @@
+:root {
+  --blue: #3EA1DB;
+  --blue-dark: #574AE8;
+  --white: #FFF;
+
+  --title: #313131;
+  --text: #717171;
+  
+  --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+@font-face {
+  font-family: LexendDeca;
+  src: url(fontes/LexendDeca-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: LexendDeca, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 56rem;
+  margin: auto;
+}
+header {
+  padding: 1.5rem 0;
+  background: var(--linear);
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  color: #FFF;
+  padding-bottom: 1.5rem;
+}
+.info a {
+  font-size: 1.5rem;
+}
+.search {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search img {
+  position: absolute;
+  margin-left: 1rem;
+}
+.search input {
+  width: 100%;
+  background: rgba(255,255,255,.2);
+  border-radius: 5px;
+  border: 0;
+  padding: 1rem;
+  padding-left: 3.5rem;
+  font-size: 1.1rem;
+  color: #FFF;
+}
+.search input::placeholder {
+  color: #FFF;
+  opacity: .5;
+  font-size: 1rem;
+}
+.section-news {
+  background-color: #F3F5F7;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+.section-news .container {
+  gap: 2rem;
+}
+.search input:focus {
+  outline: 0;
+}
+.news {
+  padding: 1rem;
+  background-color: #FFF;
+}
+.news-date {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+}
+.news h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.news p {
+  color: var(--text);
+}
+@media(max-width: 950px) {
+  .container {
+    width: 90%;
+  }
+}
